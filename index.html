@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Seguro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f172a">
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Alerta Seguro</h1>
+        <p class="disclaimer">Este aplicativo não substitui os serviços oficiais de emergência (190, 192, 193).</p>
+    </header>
+
+    <main class="app-main">
+        <!-- Botão Principal de Alerta -->
+        <section class="alert-section">
+            <button id="btnAlerta" class="btn-emergency">PRECISO DE AJUDA</button>
+        </section>
+
+        <!-- Menu de Navegação / Ações -->
+        <section class="menu-section">
+            <button class="btn-menu" onclick="abrirContatos()">Meus contatos</button>
+            <button class="btn-menu" onclick="abrirEmergencia()">Telefones de emergência</button>
+            <button class="btn-menu" onclick="abrirOrientacoes()">Orientações de segurança</button>
+        </section>
+    </main>
+
+    <!-- Modal: Telefones Úteis -->
+    <div id="modalEmergencia" class="modal hidden">
+        <div class="modal-content">
+            <h2>Telefones Úteis</h2>
+            <p>Toque para ligar (será solicitada a confirmação do seu celular):</p>
+            <a href="tel:190" class="btn-phone police">Polícia Militar (190)</a>
+            <a href="tel:192" class="btn-phone samu">SAMU (192)</a>
+            <a href="tel:193" class="btn-phone fire">Bombeiros (193)</a>
+            <button class="btn-close" onclick="fecharEmergencia()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal: Meus Contatos -->
+    <div id="modalContatos" class="modal hidden">
+        <div class="modal-content large">
+            <h2>Contatos de Confiança</h2>
+            <p>Cadastre pessoas que serão avisadas em caso de emergência:</p>
+            
+            <form id="formContato" class="contact-form">
+                <input type="text" id="nomeContato" placeholder="Nome do contato" required>
+                <input type="tel" id="telContato" placeholder="Telefone (ex: 83999999999)" required>
+                <button type="submit" class="btn-add">Adicionar Contato</button>
+            </form>
+
+            <div id="listaContatos" class="contact-list">
+                <!-- Os contatos salvos aparecerão aqui dinamicamente -->
+            </div>
+
+            <button class="btn-close" onclick="fecharContatos()">Fechar</button>
+        </div>
+    </div>
+
+    <!-- Modal: Confirmação e Envio de Alerta -->
+    <div id="modalAlerta" class="modal hidden">
+        <div class="modal-content">
+            <h2>Enviar Alerta de Ajuda</h2>
+            <p>Escolha como deseja enviar o aviso de emergência:</p>
+            
+            <div class="alert-options">
+                <button class="btn-action whatsapp" onclick="enviarAlertaWhatsApp()">Enviar via WhatsApp</button>
+                <button class="btn-action share" onclick="compartilharAlertaGeral()">Compartilhar (Outros apps)</button>
+            </div>
+
+            <button class="btn-close" onclick="fecharAlerta()">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

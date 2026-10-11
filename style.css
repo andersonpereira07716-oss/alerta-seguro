@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    font-size: 1.8rem;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.disclaimer {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    background: #1e293b;
+    padding: 8px;
+    border-radius: 8px;
+    border-left: 4px solid #f59e0b;
+}
+
+.app-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.alert-section {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-emergency {
+    width: 100%;
+    max-width: 320px;
+    height: 150px;
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(239, 68, 68, 0.4);
+    cursor: pointer;
+}
+
+.btn-emergency:active {
+    transform: scale(0.96);
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-menu {
+    width: 100%;
+    padding: 15px;
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Modais */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 100;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #334155;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-content.large {
+    max-width: 380px;
+}
+
+.modal-content h2 {
+    font-size: 1.1rem;
+    color: #f8fafc;
+}
+
+.modal-content p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+.btn-phone, .btn-action {
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.police { background-color: #2563eb; }
+.samu { background-color: #16a34a; }
+.fire { background-color: #ea580c; }
+.whatsapp { background-color: #22c55e; }
+.share { background-color: #0284c7; }
+
+/* Formulário e Lista de Contatos */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.contact-form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.btn-add {
+    padding: 10px;
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 150px;
+    overflow-y: auto;
+    margin-top: 5px;
+}
+
+.contact-item {
+    background: #0f172a;
+    padding: 8px 12px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #334155;
+    font-size: 0.85rem;
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+.btn-close {
+    padding: 8px;
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
