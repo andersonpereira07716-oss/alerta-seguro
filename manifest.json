@@ -1,11 +1,15 @@
 {
   "name": "Alerta Seguro",
   "short_name": "AlertaSeguro",
+  "description": "Aplicativo de segurança preventiva e alerta rápido.",
   "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#0f172a",
-  "description": "Aplicativo de segurança preventiva e alerta rápido.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/565/565547.png",
@@ -15,3 +19,4 @@
     }
   ]
 }
+
