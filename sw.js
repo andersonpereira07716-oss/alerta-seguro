@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alerta-seguro-cache-v1';
+const CACHE_NAME = 'alerta-seguro-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -16,15 +16,11 @@ self.addEventListener('install', event => {
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            return caches.delete(cache);
-          }
-        })
-      );
-    })
+    caches.keys().then(keys => Promise.all(
+      keys.map(key => {
+        if (key !== CACHE_NAME) return caches.delete(key);
+      })
+    ))
   );
   self.clients.claim();
 });
