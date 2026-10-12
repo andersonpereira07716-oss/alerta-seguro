@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alerta-seguro-v2';
+const CACHE_NAME = 'alerta-seguro-v3';
 const urlsToCache = [
   '/',
   '/index.html',
