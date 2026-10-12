@@ -1,39 +1,23 @@
 {
-  "id": "com.alertaseguro.app",
-  "name": "Alerta Seguro",
+  "name": "AlertaSeguro",
   "short_name": "AlertaSeguro",
   "description": "Aplicativo de segurança preventiva e alerta rápido.",
   "start_url": "/",
-  "scope": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
-  "lang": "pt-BR",
-  "dir": "ltr",
-  "orientation": "portrait",
-  "categories": ["utilities", "lifestyle"],
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/565/565547.png",
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/565/565547.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Tela principal do Alerta Seguro"
-    },
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/565/565547.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Tela principal do Alerta Seguro em computador"
     }
   ]
 }
